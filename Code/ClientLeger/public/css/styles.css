@@ -1,0 +1,581 @@
+body {
+	margin: 0;
+}
+
+main {
+  margin-left: 15vw;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+  /*****************/
+ /* STYLES HEADER */
+/*****************/
+header {
+	width: 15vw;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	background-color: #000;
+	color: #fff;
+}
+
+header a  {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+header a:visited  {
+	color: #ffffff;
+}
+
+#header-logo {
+	margin: 2vw auto;
+}
+
+header nav {
+	height: 100%;
+	margin-top: 4vw;
+}
+
+header ul {
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	list-style-type: none;
+	font-size: 1.35em;
+	padding-left: 17%;
+}
+
+.nav_btn {
+	width: fit-content;
+
+	position: relative;
+	left: -.5em;
+
+	background-color: #f16e00;
+	border-radius: 100px;
+	padding: .2em .5em;
+}
+
+header ul li {
+	margin: .8vw 0;
+	cursor: pointer;
+}
+
+header ul li:last-child {
+	margin: auto 0;
+}
+
+header ul li:hover {
+	text-decoration: underline;
+	font-weight: 600;
+}
+
+
+
+  /*****************/
+ /* STYLES FOOTER */
+/*****************/
+
+footer {
+	height: 10vh;
+
+	position: relative;
+
+	margin-top: auto;
+	background-color: #000;
+	color: #fff;
+
+	z-index: 2;
+}
+
+footer ul {
+	height: 100%;
+
+	margin: 0;
+	list-style-type: none;
+	font-size: 1.3em;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+footer ul li {
+	cursor:: pointer;
+}
+
+footer ul li::before {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+footer ul li:hover {
+	font-weight: 600;
+}
+
+#copyright-logo {
+	position: absolute;
+	bottom: 20px;
+	right: 50px;
+}
+
+
+
+/*********************//***********************/
+/***** CONNEXION *****//***** INSCRIPTION *****/
+/*********************//***********************/
+
+/***** FORMULAIRE *****/
+
+#connexion {
+	height: 100vh;
+
+	display: flex;
+}
+
+#inscription {
+	height: 100vh;
+
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+
+.connexion_form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	box-shadow: 0 0 14px 3px #000;
+	border-radius: 25px;
+	padding: 2% 10%;
+}
+
+.connexion_form_container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.connexion_form h2 {
+	margin-bottom: 2em;
+}
+
+.connexion_form form {
+	margin-bottom: 2em;
+}
+
+.login-container {
+	position: relative;
+	font-size: 1.2em;
+
+	margin-bottom: 2em;
+}
+
+
+
+.login-input {
+	border: none;
+	background-color: #fff;
+	box-shadow: 0 0 0 30px white inset;
+	border-bottom: 1px solid #000;
+	font-size: .85em;
+
+	transition: transform .2s ease-in 0s;
+	transform: scaleX(1);
+
+	padding: 0 10px;
+}
+
+.login-input:focus {
+	outline: none;
+
+	transition: transform .2s ease-in 0s;
+	transform: scaleX(1.1);
+}
+
+.login-input:hover + label {
+	color: #000;
+}
+
+.login-input:focus + label, .login-input:not(:placeholder-shown) + label {
+	transition: transform .2s ease-in 0s;
+	transform: translateY(-1.2em) translateX(-3em);
+
+	color: #333;
+}
+
+.login-label {
+	width: max-content;
+
+	position: absolute;
+	left: -7px;
+	top: 0px;
+
+	pointer-events: none;
+	color: #8c8c8c;
+
+	transition: transform .2s ease-in 0s;
+	transform: translateY(0px) translateX(0px);
+}
+
+.login-btns {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.reset-btn {
+	background-color: #000;
+	color: #fff;
+
+	border: 3px solid #000;
+	border-radius: 25px;
+
+	font-weight: 600;
+	font-size: 1em;
+
+	padding: 4px 9px;
+}
+
+.confirm-btn {
+	background-color: #fff;
+
+	border: 3px solid #000;
+	border-radius: 25px;
+
+	font-weight: 600;
+	font-size: 1.2em;
+
+	padding: 4px 9px;
+}
+
+.reset-btn, .confirm-btn {
+	cursor: pointer;
+
+	transition: transform .2s ease 0s;
+	transform: scale(1);
+}
+
+.reset-btn:hover, .confirm-btn:hover {
+	transition: transform .2s ease 0s;
+	transform: scale(1.1);
+}
+
+
+/* INSCRIPTION */
+
+.required-field {
+	color: orange;
+	position: relative;
+	top: -0.2em;
+	font-size: .9em;
+}
+
+.required-field-legende {
+	color: orange;
+	font-size: 0.85em;
+	text-align: center;
+}
+
+
+
+/***** Lien vers Inscription *****/
+
+
+#connexion > div {
+	width: 50vw;
+}
+
+#inscription > div {
+	width: 50vw;
+}
+
+#connexion form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.connexion_bg {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo-connexion {
+	background-image: url("http://localhost/ClientLeger/public/img/logo_Orange.png");
+	width: 175px;
+	height: 175px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background-size: contain;
+}
+
+.logo-inscription {
+	background-image: url("http://localhost/ClientLeger/public/img/logo_Orange.png");
+	width: 175px;
+	height: 175px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 10;
+	background-size: contain;
+}
+
+.connexion_bg img {
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+	z-index: 1;
+
+	position: absolute;
+}
+
+.goto-inscription-connexion {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	z-index: 5;
+	color: #fff;
+	position: relative;
+
+	font-size: 1.5em;
+	font-weight: 600;
+}
+
+.connexion_bg div span {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 7em;
+	height: 1.5em;
+
+	background-color: #000;
+	border: 3px solid #fff;
+	border-radius: 25px;
+	font-size: 1.07em;
+	font-weight: 600;
+}
+
+.connexion_bg div span a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.connexion_bg div span:hover {
+	background-color: #fff;
+	border: 3px solid #000;
+}
+
+
+.connexion_bg div span:hover > a {
+	color: #000;
+}
+
+
+
+
+/********************/
+/** STYLES COMMUNS **/
+/********************/
+
+#fullpage {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: #f0f0f0;
+}
+
+
+/*****************************/
+/***  PAGE TABLEAU DE BORD  **/
+/*****************************/
+
+#tableau-de-bord {
+
+}
+
+.intervention-card-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 30px;
+	padding: 0 75px;
+}
+
+.intervention-card {
+	height: 100%;
+	min-width: 160px;
+	max-width: 300px;
+	display: flex;
+	flex-direction: column;
+	background-color: #ccc;
+	border-radius: 10px;
+	padding: 10px 20px;
+}
+
+.intervention-card h4 {
+	margin-top: 0;
+	text-align: center;
+}
+
+
+/*****************************/
+/** PAGE SIGNALER UNE PANNE **/
+/*****************************/
+
+main > div {
+    margin-top: 30px; 
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+main h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+main form {
+    width: 100%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+main label {
+    width: 100%;
+    box-sizing: border-box;
+    color: #000; 
+}
+
+main input, main select {
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+main textarea {
+    width: calc(100% - 20px);
+    height: 80px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+main button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+
+main button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+main button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+main button:hover {
+    background-color: #2980b9;
+}
+
+
+/*****************************/
+/** PAGE ACCEPTER UNE PANNE **/
+/*****************************/
+
+#accepter-une-panne a {
+	color: #000;
+	text-decoration: none;
+	height: fit-content;
+}
+
+#accepter-une-panne a:visited {
+	color: #000;
+}
+
+
+/******************************/
+/***** CARTE INTERVENTION *****/
+/******************************/
+
+.tech-btns-card {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 30px;
+	margin: 15px 0 0 0;
+}
+
+.tech-btns-card-btn {
+	background-color: transparent;
+	color: #000;
+	text-decoration: underline
+}
+
+.client-btns-card {
+	margin: 15px 0 0 0;
+}
+
+/******************************/
+/** PAGE DETAIL INTERVENTION **/
+/******************************/
+
+#detail-inter {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+/**********************/
+/**  PAGE DE PROFIL  **/
+/**********************/
+
+#profil > div {
+	display: flex;
+	flex-direction: column;
+
+}
